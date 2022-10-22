@@ -1,7 +1,9 @@
 import "bootstrap/dist/css/bootstrap.css";
 import Button from "./components/Button";
+import React from "react";
 
 export default function App () {
+  const [items, setItems]
   return (
     <div className="container">
       <h1 className="mt-3">
