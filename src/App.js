@@ -20,9 +20,11 @@ export default function App () {
       <div>
         <span className="me-3">Nome do Produto</span>
 
-        <Button onClick={add} cor="success">
+        <button className="btn btn-success btn-sm" onClick={add}>Adicionar</button>
+
+        {/* <Button onClick={add} cor="success">
           Adcionar ao Carrinho
-        </Button>
+        </Button> */}
       </div>
     </div>
   )
