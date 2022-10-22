@@ -18,6 +18,18 @@ export default function App () {
     setAmout(amount + price)
   }
 
+  const CardProduto = (props) => {
+    return (
+      <div className="mt-2">
+        <span className="me-3"> {props.nome}</span>
+
+        <button className="btn btn-success btn-sm" onClick={() => add(props.valor)}>
+          Adicionar
+        </button>
+      </div>
+    )
+  }
+
   return (
     <div className="container">
       <h1 className="mt-3">
@@ -31,18 +43,7 @@ export default function App () {
       <hr />
 
 
-    {products.map(cadaProduto => {
-      return (
-      <div>
-        <span className="me-3">{cadaProduto.nome}</span>
-
-        <button className="btn btn-success btn-sm" onClick={() => add(90)}>
-          Adicionar
-        </button>
-      </div>
-      )
-    })}
-
+      {products.map(cadaProduto => <CardProduto {...cadaProduto}/>)}
       
   </div>
   )
