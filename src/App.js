@@ -1,7 +1,11 @@
+//minuto 14:00/  importando bootstrap
+import "bootstrap/dist/css/bootstrap.css";
+
+
 //minuto 7:00/ criando componente
 function Button (props) {
   return(
-    <button>{props.children}</button>
+    <button className="btn btn-dark">{props.children}</button>
   )
 }
 
