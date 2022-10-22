@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+//minuto 7:00/ criando componente
+function Button (props) {
+  return(
+    <button>{props.children}</button>
+  )
 }
 
-export default App;
+
+
+// começo da aula, criando função app   //minuto 4:00
+export default function App () {
+  return (
+    <div>
+      <h1>Ola mundo</h1>
+      <Button>
+        <storng>Cadastro</storng>
+      </Button>
+      <h2>Subtitulo</h2>
+    </div>
+  )
+}
