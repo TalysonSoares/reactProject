@@ -10,7 +10,7 @@ export default function App () {
   React.useEffect(() => {
     fetch('http://192.168.3.112:8000/produtos')
       .then(res => res.json())
-      .then(dados => setProducts(dados))
+      .then(dados => setProducts(dados));
   }, []);
 
   const add = (price) => {
@@ -30,25 +30,20 @@ export default function App () {
         {products.length} produtos encontrados
       <hr />
 
+
+    {products.map(cadaProduto => {
+      return (
       <div>
-        <span className="me-3">Teclado</span>
+        <span className="me-3">{cadaProduto.nome}</span>
 
         <button className="btn btn-success btn-sm" onClick={() => add(90)}>
           Adicionar
         </button>
       </div>
+      )
+    })}
+
       
-      <div>
-        <span className="me-3">Mouse</span>
-
-        <button className="btn btn-success btn-sm" onClick={() => add(32)}>
-          Adicionar
-        </button>
-
-        {/* <Button onClick={add} cor="success">
-          Adcionar ao Carrinho
-        </Button> */}
-      </div>
-    </div>
+  </div>
   )
 }
