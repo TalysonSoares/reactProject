@@ -4,7 +4,10 @@ import Button from "./components/Button";
 export default function App () {
   return (
     <div className="container">
-      <h1 className="mt-3">Carrinho de compras</h1>
+      <h1 className="mt-3">
+       Carrinho de compra
+       <span className="text-primary ms-3">0</span> 
+      </h1>
 
       <hr />
 
