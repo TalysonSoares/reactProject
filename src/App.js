@@ -1,10 +1,17 @@
 import "bootstrap/dist/css/bootstrap.css";
-import Button from "./components/Button";
+// import Button from "./components/Button";
 import React from "react";
 
 export default function App () {
   const [items, setItems] = React.useState(0);
   const [amount, setAmout] = React.useState(0);
+  const [products, setProducts] = React.useState([]);
+
+  React.useEffect(() => {
+    fetch('http://192.168.3.112:8000/produtos')
+      .then(res => res.json())
+      .then(dados => setProducts(dados))
+  }, []);
 
   const add = (price) => {
     setItems(items + 1);
@@ -19,6 +26,8 @@ export default function App () {
        <span className="text-success ms-3">R$ {amount} </span> 
       </h1>
 
+      <hr />
+        {products.length} produtos encontrados
       <hr />
 
       <div>
