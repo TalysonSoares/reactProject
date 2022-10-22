@@ -3,12 +3,18 @@ import Button from "./components/Button";
 
 export default function App () {
   return (
-    <div>
-      <h1>Ola mundo</h1>
-      <Button cor="danger">
-        <storng>Cadastro</storng>
-      </Button>
-      <h2>Subtitulo</h2>
+    <div className="container">
+      <h1 className="mt-3">Carrinho de compras</h1>
+
+      <hr />
+
+      <div>
+        <span className="me-3">Nome do Produto</span>
+
+        <Button cor="success">
+          Adcionar ao Carrinho
+        </Button>
+      </div>
     </div>
   )
 }
